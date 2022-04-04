@@ -1,62 +1,37 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# ![Microverse Logo](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+## To Do List
 
-> Description the project.
+> This is a website that makes your daily tasks easy, since you can list them and mark them as done once you finish them, and later you can remove them so you can create a new one again also you can close the website and open it again, it will just reload the saved information.
 
+## ![Screenshot](./assets/demo.png)
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Webpack
+- Local Server
+- HTML
+- CSS
+- JAVA SCRIPT
+- LINTERS
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+[Live Demo Link](https://andrelau11.github.io/To-Do-List/)
 
 ## Authors
 
-👤 **Author1**
+👤 **Hector Andre Lau**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@AndreLau11](https://github.com/AndreLau11)
+- Twitter: [@HectorAndreLau](https://twitter.com/HectorAndreLau)
+- LinkedIn: [@HectorAndreLauEstrada](https://www.linkedin.com/in/h%C3%A9ctor-andr%C3%A9-lau-estrada-b4947795/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/AndreLau11/To-Do-List/issues).
 
 ## Show your support
 
