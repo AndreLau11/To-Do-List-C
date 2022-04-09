@@ -73,7 +73,7 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
+    "@babel/plugin-transform-modules-commonjs": "^7.17.9",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.6.0",
     "eslint": "^7.32.0",
@@ -94,7 +94,8 @@
   "scripts": {
     "build": "webpack --mode development",
     "start": "webpack serve --open",
-    "test": "jest --env=jsdom"
+    "test": "jest --env=jsdom --coverage",
+    "watch": "jest --env=jsdom --watch *.js"
   },
   "repository": {
     "type": "git",
