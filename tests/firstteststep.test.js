@@ -81,3 +81,117 @@ describe('Delete', () => {
     expect(list.length).toBe(1);
   });
 });
+
+describe('Check Test', () => {
+  test('Test 1', () => {
+    document.body.innerHTML = '<div> <ul class="todo-list"></ul> </div>';
+
+    const Test = new Application(true);
+    Test.addTaskToList('Example 1');
+    Test.addTaskToList('Example 2');
+    expect(Test.onSaveList()).not.toBeUndefined();
+    expect(Test.checkTask(0, false)).toBeTruthy();
+  });
+
+  test('Test 2', () => {
+    document.body.innerHTML = '<div> <ul class="todo-list"></ul>';
+
+    const Test = new Application(true);
+    Test.addTaskToList('Example 1');
+    Test.addTaskToList('Example 2');
+
+    expect(Test.onSaveList()).not.toBeUndefined();
+    expect(Test.checkTask(0, true)).toBeFalsy();
+  });
+
+  test('Test 3', () => {
+    document.body.innerHTML = '<div> <ul class="todo-list"></ul> </div>';
+
+    const Test = new Application(true);
+    Test.addTaskToList('Example 1');
+    Test.addTaskToList('Example 2');
+    Test.addTaskToList('Example 3');
+
+    expect(Test.onSaveList()).not.toBeUndefined();
+    expect(Test.checkTask(0, true)).toBeFalsy();
+    expect(Test.checkTask(2, false)).toBeTruthy();
+  });
+});
+
+describe('Edit Test', () => {
+  test('Test 1', () => {
+    document.body.innerHTML = '<div> <ul class="todo-list"></ul> </div>';
+
+    const Test = new Application(true);
+    Test.addTaskToList('Example 1');
+    Test.addTaskToList('Example 2');
+
+    expect(Test.onSaveList()).not.toBeUndefined();
+    expect(Test.editTaskList(1, 'Blue')).toBe('Blue');
+  });
+
+  test('Test 2', () => {
+    document.body.innerHTML = '<div> <ul class="todo-list"></ul> </div>';
+
+    const Test = new Application(true);
+    Test.addTaskToList('Example 1');
+    Test.addTaskToList('Example 2');
+    Test.addTaskToList('Example 3');
+
+    expect(Test.onSaveList()).not.toBeUndefined();
+    expect(Test.editTaskList(1, 'Blue')).toBe('Blue');
+    expect(Test.editTaskList(2, 'Green')).toBe('Green');
+  });
+
+  test('Test 3', () => {
+    document.body.innerHTML = '<div> <ul class="todo-list"></ul> </div>';
+
+    const Test = new Application(true);
+    Test.addTaskToList('Example 1');
+    Test.addTaskToList('Example 2');
+    Test.addTaskToList('Example 3');
+
+    expect(Test.onSaveList()).not.toBeUndefined();
+    expect(Test.editTaskList(2, 'Blue')).toBe('Blue');
+  });
+});
+
+describe('Clear All Checked Tasks', () => {
+  test('Test 1', () => {
+    document.body.innerHTML = '<div> <ul class="todo-list"></ul> </div>';
+
+    const Test = new Application(true);
+    Test.addTaskToList('Example 1');
+    Test.addTaskToList('Example 2');
+    Test.addTaskToList('Example 3');
+    Test.checkTask(0, false);
+    expect(Test.onSaveList()).not.toBeUndefined();
+    expect(Test.clearAllChecked()).toBeTruthy();
+  });
+
+  test('Test 2', () => {
+    document.body.innerHTML = '<div> <ul class="todo-list"></ul> <div>';
+
+    const Test = new Application(true);
+    Test.addTaskToList('Example 1');
+    Test.addTaskToList('Example 2');
+    Test.addTaskToList('Example 3');
+
+    expect(Test.onSaveList()).not.toBeUndefined();
+    expect(Test.clearAllChecked()).toBeTruthy();
+  });
+
+  test('Test 3', () => {
+    document.body.innerHTML = '<div> <ul class="todo-list"></ul> <div>';
+
+    const Test = new Application(true);
+    Test.addTaskToList('Example 1');
+    Test.addTaskToList('Example 2');
+    Test.addTaskToList('Example 3');
+    Test.checkTask(0, false);
+    Test.checkTask(1, false);
+
+    expect(Test.onSaveList()).not.toBeUndefined();
+    expect(Test.clearAllChecked()).toBeTruthy();
+  });
+});
